@@ -255,7 +255,7 @@ class Package(CMakePackageBase):
         self.defines["appname"] = self.applicationExecutable
         self.defines["appimage_native_package_name"] = f'{self.applicationShortname.lower().replace("_", "-")}-client'
         self.defines["apppath"] = "Applications/KDE/" + self.applicationExecutable + ".app"
-        self.defines["company"] = "ownCloud GmbH"
+        self.defines["company"] = "LNKASIA TECHSOL"
 
         exePath = f"{self.defines['appname']}{CraftCore.compiler.executableSuffix}"
         if isinstance(self, NullsoftInstallerPackager):
