@@ -38,5 +38,4 @@ class Package(SourceOnlyPackageBase):
         return True
 
     def checkoutDir(self, index=0):
-        target = self.subinfo.buildTarget if hasattr(self.subinfo, 'buildTarget') else "default"
-        return os.path.join(CraftStandardDirs.blueprintRoot(), self.package.name, target)
+        return os.path.join(CraftStandardDirs.blueprintRoot(), self.package.name)
