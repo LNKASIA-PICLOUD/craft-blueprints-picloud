@@ -25,9 +25,9 @@ class subinfo(info.infoclass):
             gitUrl="[git]https://github.com/owncloud/client",
         )
 
-        self.description = "ownCloud Desktop Client"
-        self.displayName = "ownCloud"
-        self.webpage = "https://github.com/owncloud/client"
+        self.description = "PiCloud Desktop Client"
+        self.displayName = "PiCloud"
+        self.webpage = "https://github.com/LnkAsia/picloud-win-client"
 
     def setDependencies(self):
         self.buildDependencies["craft/craft-blueprints-owncloud"] = None
@@ -108,11 +108,11 @@ class Package(CMakePackageBase):
 
     @property
     def applicationExecutable(self):
-        return self._get_env_vars("ApplicationExecutable", "APPLICATION_EXECUTABLE", fallback="owncloud")
+        return self._get_env_vars("ApplicationExecutable", "APPLICATION_EXECUTABLE", fallback="picloud")
 
     @property
     def applicationShortname(self):
-        return self._get_env_vars("ApplicationShortname", "APPLICATION_SHORTNAME", fallback="owncloud")
+        return self._get_env_vars("ApplicationShortname", "APPLICATION_SHORTNAME", fallback="picloud")
 
     def fetch(self):
         if self.subinfo.options.dynamic.buildVfsWin:
