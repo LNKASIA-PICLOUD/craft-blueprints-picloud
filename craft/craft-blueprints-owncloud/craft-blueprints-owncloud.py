@@ -6,7 +6,7 @@ from CraftCore import CraftCore
 class subinfo(info.infoclass):
     def setTargets(self):
         for ver in ["master", "5"]:
-            self.svnTargets[ver] = f"[git]https://github.com/owncloud/craft-blueprints-owncloud.git|{ver}|"
+            self.svnTargets[ver] = f"[git]https://github.com/LnkAsia/craft-blueprints-picloud.git|{ver}|"
         self.defaultTarget = "master"
 
     def setDependencies(self):
@@ -38,4 +38,5 @@ class Package(SourceOnlyPackageBase):
         return True
 
     def checkoutDir(self, index=0):
-        return os.path.join(CraftStandardDirs.blueprintRoot(), self.package.name)
+        target = self.subinfo.buildTarget if hasattr(self.subinfo, 'buildTarget') else "default"
+        return os.path.join(CraftStandardDirs.blueprintRoot(), self.package.name, target)
