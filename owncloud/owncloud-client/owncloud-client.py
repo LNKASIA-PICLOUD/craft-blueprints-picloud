@@ -25,9 +25,9 @@ class subinfo(info.infoclass):
             gitUrl="[git]https://github.com/owncloud/client",
         )
 
-        self.description = "ownCloud Desktop Client"
-        self.displayName = "ownCloud"
-        self.webpage = "https://github.com/owncloud/client"
+        self.description = "PiCloud Desktop Client"
+        self.displayName = "PiCloud"
+        self.webpage = "https://github.com/LnkAsia/picloud-win-client"
 
     def setDependencies(self):
         self.buildDependencies["craft/craft-blueprints-owncloud"] = None
@@ -255,7 +255,7 @@ class Package(CMakePackageBase):
         self.defines["appname"] = self.applicationExecutable
         self.defines["appimage_native_package_name"] = f'{self.applicationShortname.lower().replace("_", "-")}-client'
         self.defines["apppath"] = "Applications/KDE/" + self.applicationExecutable + ".app"
-        self.defines["company"] = "ownCloud GmbH"
+        self.defines["company"] = "LNKASIA TECHSOL"
 
         exePath = f"{self.defines['appname']}{CraftCore.compiler.executableSuffix}"
         if isinstance(self, NullsoftInstallerPackager):
