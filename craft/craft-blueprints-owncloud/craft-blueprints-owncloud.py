@@ -6,7 +6,7 @@ from CraftCore import CraftCore
 class subinfo(info.infoclass):
     def setTargets(self):
         for ver in ["master", "5"]:
-            self.svnTargets[ver] = f"[git]https://github.com/LnkAsia/craft-blueprints-picloud.git|{ver}|"
+            self.svnTargets[ver] = f"[git]https://github.com/LNKASIA-PICLOUD/craft-blueprints-picloud.git|{ver}|"
         self.defaultTarget = "master"
 
     def setDependencies(self):
